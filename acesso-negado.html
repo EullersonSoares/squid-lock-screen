@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" type="text/css" href="acesso-negado.css">
+
+        <title>Página de Erro - SquidGuard</title>      
+
+	</head>
+	<body cz-shortcut-listen="true">
+        
+        <header class="header">
+
+            <nav class="top-bar">
+                <!--?php if ($config['installedpackages']['squidguarddefault']['config'][0]['deniedmessage']): ?-->
+                <h1>
+                    <!--?= $config['installedpackages']['squidguarddefault']['config'][0]['deniedmessage'] ?--><!--/*:*/--> <!--?= htmlspecialchars($err_code[$er_code_id]) ?-->
+                </h1><!--/*;*/-->
+
+                <!--?php else: ?-->
+                
+                <h1> ACESSO NEGADO! <!--/*<?= $g['product_name'] ?>. Proxy: <?= htmlspecialchars($err_code[$er_code_id]) ?>*/-->
+                </h1>
+
+                <!--?php endif; ?-->
+                
+            </nav>
+
+        </header>  
+
+        <hr>
+        
+        <main>
+            <div class="textUrl">
+
+                <!--?php if ($cl['u']): ?-->
+
+                <b> URL: </b> <!--?= htmlspecialchars($cl['u']) ?--><br>
+
+                <!--?php endif; ?-->
+
+            </div>
+
+            <div class="body-container">
+                
+                <div class="notification"> <h4> O site que você tentou visitar foi bloqueado por nossas políticas de Filtragem da Web</h4></div>
+
+                <div class="text-error">
+                    <!--?php if ($err_msg): ?-->
+
+                    <b>Acesso negado pelas seguintes razões:</b> <!--?= htmlspecialchars($err_msg) ?--> <br>
+
+                    <!--?php endif; ?-->
+
+                    <!-- <hr size="1" noshade> -->
+                        <br>      
+                                            
+                    <span>- Você pode estar tentando acessar um site bloqueado pelo Firewall do Instituto Compartilha.</Command></span><br>
+
+                        <br>
+
+                    <span>- O site requisitado pode não possuir um certificado SSL;</span><br>
+
+                        <br>
+
+                    <span>- O conteúdo deste site pode estar imprópio;</span> <br>
+
+                    <p>&nbsp;</p>
+
+                    <span>Para mais informações, entre em contato com: <a href="mailto:ti@institutocompartilha.ngo">ti@institutocompartilha.ngo</a></span>
+
+                </div>
+
+                        <img src="http://acesso-negado.institutocompartilha.org.br/img/11104.jpg" class="imageError">
+
+                        <img src="http://acesso-negado.institutocompartilha.org.br/img/logo.png" class="logo">
+                        
+            </div>
+
+            <div class="network-data">
+
+                <!--?php if ($cl['a']): ?-->
+                <b class="information"> Endereço do Cliente: </b> <!--?= htmlspecialchars($cl['a']) ?-->
+                <!--?php endif; ?-->
+
+                    
+
+                <!--?php if ($cl['n']): ?-->
+                <b class="information"> Nome do Cliente:    </b> <!--?= htmlspecialchars($cl['n']) ?-->
+                <!--?php endif; ?-->
+
+                
+
+                <!--?php if ($cl['i']): ?-->
+                <b class="information"> Usuário:    </b> <!--?= htmlspecialchars($cl['i']) ?-->
+                <!--?php endif; ?-->
+
+
+                <!--?php if ($cl['s']): ?-->
+                <b class="information"> Grupo:   </b> <!--?= htmlspecialchars($cl['s']) ?-->
+                <!--?php endif; ?-->
+
+                
+                <!--?php if ($cl['t']): ?-->
+                <b class="information"> Categoria:   </b> <!--?= htmlspecialchars($cl['t']) ?--> <br>
+                <!--?php endif; ?-->
+            
+            </div>
+
+        </main>
+
+        <hr>
+
+        <h4 class="footer">Copyright @ Instituto Compartilha | Desenvolvido por Tecnologia da Informação.</h4>
+        
+    </body>
+
+</html>
